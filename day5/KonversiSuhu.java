@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.text.DecimalFormat;
 
 public class KonversiSuhu {
     private String suhuAwal, suhuAkhir;
@@ -58,7 +59,8 @@ public class KonversiSuhu {
         }
     }
     public void output() {
-        System.out.println("Hasil Konversi : "+nilaiAkhir+" "+suhuAkhir);
+        DecimalFormat df2=new DecimalFormat("#.##");
+        System.out.println("Hasil Konversi : "+df2.format(nilaiAkhir)+" "+suhuAkhir);
     }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);

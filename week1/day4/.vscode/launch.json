@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - PanggilStatic",
+            "request": "launch",
+            "mainClass": "cobastatic.PanggilStatic",
+            "projectName": "day4_51e99b6e"
+        }
+    ]
+}

@@ -27,7 +27,28 @@
                 <td>80</td>
             </tr>
         </table>
-        <h2>Colspan & Rowspwa</h2>
+        <h2>Colspan & Rowspan</h2>
+        
+        <table border="1" style="border-collapse: collapse">
+                <tr>
+                    <td style="padding: 5 px">Baris 1, Kolom 1</td>
+                    <td>Baris 1, Kolom 2</td>
+                    <td>Baris 1, Kolom 3</td>
+                </tr>
+                <tr>
+                    <td>Baris 2, Kolom 1</td>
+                    <td colspan="2">Baris 2, Kolom 2 & 3</td>
+                </tr>
+                <tr>
+                    <td rowspan="2">Baris 3 & 4, Kolom 1</td>
+                    <td>Baris 3, Kolom 2</td>
+                    <td>Baris 3, Kolom 3</td>
+                </tr>
+                <tr>
+                    <td>Baris 4, Kolom 2</td>
+                    <td>Baris 4, Kolom 3</td>
+                </tr>
+            </table><br />
         <table border="1">
             <tr>
                 <td colspan="2">colspan</td>
@@ -41,6 +62,92 @@
             <tr>
                 <td>data4</td>
                 <td>data5</td>
+            </tr>
+        </table><br />
+        <table border="1">
+            <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Tahun</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Andi</td>
+                <td>2019</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Aji</td>
+                <td>2010</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">Total</td>
+            </tr>
+            <tr>
+                <td colspan="2">Jumlah Tahun</td>
+                <td>2010-2019</td>
+            </tr>
+        </table><br />
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th>Andi</th>
+            </tr>
+            <tr>
+                <td rowspan="3">telepon</td>
+                <td>+62</td>
+            </tr>
+            <tr>
+                <td>+63</td>
+            </tr>
+            <tr>
+                <td>+64</td>
+            </tr>
+        </table><br />
+        <table border="1">
+            <tr>
+                <th>Name</th>
+                <th colspan="2">telepon</th>
+            </tr>
+            <tr>
+                <td>Andi</td>
+                <td>+61</td>
+                <td>+62</td>
+            </tr>
+        </table><br />
+        <table border="1" style="border-collapse: collapse;">
+            <tr>
+                <th rowspan="2">No</th>
+                <th rowspan="2">Paraf</th>
+                <th>Hari</th>
+            </tr>
+            <tr>
+                <th>Tanggal</th>
+            </tr>
+            <tr>
+                <td rowspan="2">1</td>
+                <td rowspan="2">ttd</td>
+                <td>Senin</td>
+            </tr>
+            <tr>
+                <td>30-Sept</td>
+            </tr>
+        </table>
+        <h2>Latihan</h2>
+        <table style="border-style: solid; border-color: black; border-collapse: collapse;">
+            <tr>
+                <th style="border-style: none solid solid none; padding: 5px;">Name</th>
+                <th style="border-style: none none solid none; padding: 5px;">Andi</th>
+            </tr>
+            <tr>
+                <td rowspan="2" style="border-bottom: none; border-style: none solid none none; padding: 5px;">telepon</td>
+                <td style="border-style: none none solid none; padding: 5px;">t62</td>
+            </tr>
+            <tr>
+                <td style="border-style: none none solid none; padding: 5px;">t63</td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-top: none; height: 20px; padding: 5px;"></td>
             </tr>
         </table>
     </body>

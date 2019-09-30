@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Form</title>
+    </head>
+    <body>
+        <form action="basicform.html" method="GET">
+            <fieldset style="width: 270px;">
+                <legend>Client Detail</legend>
+                <pre><label for="test" style="cursor: default;">Name    : </label><input type="text" name="clientName" id="Name" /></pre>
+                <pre><label>Phone   : </label><input type="text" name="clientPhone" id="Phone /"></pre>
+            </fieldset>
+            <fieldset style="width: 270px;">
+                <legend>Order Detail</legend>
+                <pre>Quantity   : <select name="orderQuantity" id="Quantity">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                  </select>
+                </pre>
+                <pre>Remarks    : <textarea cols="10" rows="10" id="Remarks" name="orderRemarks"></textarea></pre>
+            </fieldset>
+            <p>
+                <input type="submit" value="Submit" />
+                <input type="reset" value="Reset" />
+            </p>
+        </form>
+    </body>
+</html>

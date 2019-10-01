@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Form</title>
+    </head>
+    <body>
+        <h2>Basic HTML Table</h2>
+        <form action="form_validation.html" method="POST">
+            <table border="1" style="border-collapse: collapsel">
+                <tr>
+                    <td>First Name</td>
+                    <td> : </td>
+                    <td><input type="text" name="firstName" id="firstName" /></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td> : </td>
+                    <td><input type="email" name="eamil" id="email" required /></td>
+                </tr>
+                <tr>
+                    <td>Date Born</td>
+                    <td> : </td>
+                    <td><input type="date" name="dateBorn" id="dateBorn" required /></td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td> : </td>
+                    <td><input type="number" name="age" id="age"/></td>
+                </tr>
+                <tr>
+                    <td>Address</td>
+                    <td> : </td>
+                    <td><textarea name="address" id="address"></textarea></td>
+                </tr>
+                <tr>
+                    <td>Sex</td>
+                    <td> : </td>
+                    <td>
+                        <select name="sex" id="sex" required>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td> : </td>
+                    <td><input type="password" name="password" id="password" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td><input type="submit" value="Submit" /><input type="reset" value="Reset" /></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

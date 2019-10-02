@@ -6,7 +6,6 @@ div.container {
 div.header {
     padding: 2px 40px 13px 50px;
     background-color:chocolate;
-    /* height: 900px; */
 }
 div.menu {
     padding: 5px;
@@ -18,14 +17,16 @@ div.main {
 div.sidebar {
     float: left;
     background-color: black;
-    color: white;
-    height: 100%;
-    width: 25%;
+    color:white;
+    padding: 10px;
+    height: 430px;
+    width: 205px;
 }
 div.content {
     float: left;
-    width: 75%;
-    height: 100%;
+    padding: 10px;
+    width: 655px;
+    height: 430px;
     background-color: orangered;
 }
 div.footer {

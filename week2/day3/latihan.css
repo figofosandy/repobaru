@@ -9,7 +9,7 @@ div.header {
     /* height: 900px; */
 }
 div.menu {
-    padding: 5px;
+    padding: 10px;
     background-color: yellow;
 }
 div.main {
@@ -29,22 +29,30 @@ div.footer {
     padding: 10px;
 }
 div.sideone {
-    height: 50%;
+    padding: 10px;
+    height: 205px;
+    width: 205px;
     background-color: darkslategrey;
     color: white;
 }
 div.sidetwo {
-    height: 50%;
+    padding: 10px;
+    height: 205px;
+    width: 205px;
     background-color: black;
     color: white;
 }
 div.contone {
-    height: 50%;
+    padding: 10px;
+    height: 205px;
+    width: 655px;
     background-color:maroon;
     color: white;
 }
 div.conttwo {
-    height: 50%;
+    padding: 10px;
+    height: 205px;
+    width: 655px;
     background-color: darkred;
     color: white;
 }

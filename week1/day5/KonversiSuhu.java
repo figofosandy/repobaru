@@ -1,16 +1,26 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Scanner;
+import java.util.stream.Stream;
+//import com.sun.xml.internal.bind.v2.schemagen.xmlschema.List;
+
 import java.text.DecimalFormat;
 
 public class KonversiSuhu {
     private String suhuAwal, suhuAkhir;
     private double nilaiAwal, nilaiAkhir;
+    Stream<String> celcius = Stream.of("c","ce","cel","celc","celci","celciu","celcius");
+    boolean celciusBoolean = celcius.anyMatch(p1 -> suhuAwal.equalsIgnoreCase(p1));
+    Stream<String> reamur = Stream.of("r","re","rea","ream","reamu","reamur");
+    boolean reamurBoolean = reamur.anyMatch(p2 -> suhuAwal.equalsIgnoreCase(p2));
+    Stream<String> farenheit = Stream.of("f","fa","far","fare","faren","farenh","farenhe","farenhei","farenheit");
+    boolean farenheitBoolean = farenheit.anyMatch(p3 -> suhuAwal.equalsIgnoreCase(p3));
+    /*
     private String[] celcius = new String[] {"c","ce","cel","celc","celci","celciu","celcius"};
     private String[] reamur = new String[] {"r","re","rea","ream","reamu","reamur"};
     private String[] farenheit = new String[] {"f","fa","far","fare","faren","farenh","farenhe","farenhei","farenheit"};
     private boolean celciusBoolean=Arrays.asList(celcius).stream().anyMatch(x->x.equalsIgnoreCase(suhuAwal));
     private boolean reamurBoolean=Arrays.asList(reamur).stream().anyMatch(x->x.equalsIgnoreCase(suhuAwal));
-    private boolean farenheitBoolean=Arrays.asList(farenheit).stream().anyMatch(x->x.equalsIgnoreCase(suhuAwal));
+    private boolean farenheitBoolean=Arrays.asList(farenheit).stream().anyMatch(x->x.equalsIgnoreCase(suhuAwal)); */
     public KonversiSuhu(String suhuAwal, String suhuAkhir, double nilaiAwal) {
         this.suhuAwal=suhuAwal;
         this.suhuAkhir=suhuAkhir;

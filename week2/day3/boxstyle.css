@@ -1,0 +1,33 @@
+div.container {
+    background-color: blue;
+    width: 900px;
+    margin: 10px auto;
+}
+div.header {
+    padding: 2px 40px 13px 50px;
+    background-color:chocolate;
+    /* height: 900px; */
+}
+div.menu {
+    padding: 5px;
+    background-color: yellow;
+}
+div.main {
+    height: 450px;
+}
+div.sidebar {
+    float: left;
+    background-color: black;
+    color: white;
+    height: 100%;
+    width: 30%;
+}
+div.content {
+    float: left;
+    width: 70%;
+    height: 100%;
+    background-color: orangered;
+}
+div.footer {
+    padding: 10px;
+}

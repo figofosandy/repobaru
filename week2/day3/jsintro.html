@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Js Intro</title>
+    </head>
+    <body>
+        <script lang="javascript">
+            function pressbutton() {
+                var x=5;
+                var y=5.1+x;
+                document.getElementById("angka").innerHTML=""+y;
+                alert('1');
+                console.log('test');
+            }
+        </script>
+        <h2>What Can JavaScript Do?</h2>
+        <p id="demo">JavaScript can change HTML content.</p>
+        <button type="button" onclick='document.getElementById("demo").innerHTML="Hello JavaScript!"'>Click Me!</button>
+        <button type="button" onclick="pressbutton()">Click Alert!</button>
+        <button type="button" onclick='document.getElementById("demo").innerHTML="JavaScript can change HTML content."'>Reset</button>
+        <br>
+        <p>JavaScript can change element.</p>
+        <button type="button" onclick='document.getElementById("myimage").src="https://www.w3schools.com/js/pic_bulbon.gif"'>Turn on the light!</button>
+        <img id="myimage" alt="light" src="https://www.w3schools.com/js/pic_bulboff.gif">
+        <button type="button" onclick='document.getElementById("myimage").src="https://www.w3schools.com/js/pic_bulboff.gif"'>Turn off the light!</button>
+        <br>
+        <h2>JavaScript Numbers</h2>
+        <p>Number can be written with or without decimals.</p>
+        <p id="angka">test</p>
+    </body>
+</html>

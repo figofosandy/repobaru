@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Perhitungan</title>
+    </head>
+    <body>
+        <script lang="javascript">
+            function hitung() {
+                var angka1=parseInt(document.getElementById("angka1").value);
+                var angka2=parseInt(document.getElementById("angka2").value);
+                var hasil=angka1+angka2;
+                document.getElementById("hasil").value=hasil;
+                console.log(angka1+"+"+angka2+"="+hasil);
+            }
+            function kali() {
+                var angka1=parseInt(document.getElementById("angka1").value);
+                var angka2=parseInt(document.getElementById("angka2").value);
+                var hasil=angka1*angka2;
+                document.getElementById("hasil").value=hasil;
+                console.log(angka1+"*"+angka2+"="+hasil);
+            }
+            function bagi() {
+                var angka1=parseInt(document.getElementById("angka1").value);
+                var angka2=parseInt(document.getElementById("angka2").value);
+                var hasil=angka1/angka2;
+                document.getElementById("hasil").value=hasil;
+                console.log(angka1+"/"+angka2+"="+hasil);
+            }
+        </script>
+        <h2>JavaScript Pertambahan</h2>
+        <pre>
+            <label>angka1 : </label>
+            <input type="number" id="angka1">
+            <label>angka2 : </label>
+            <input type="number" id="angka2">
+            <label></label>
+            <input type="button" onclick="hitung()" value="Tambah"> <input type="button" onclick="kali()" value="Kali"> <input type="button" onclick="bagi()" value="Bagi">
+            <label></label>
+            <label>hasil : </label>
+            <input type="number" disabled id="hasil">
+        </pre>
+    </body>
+</html>

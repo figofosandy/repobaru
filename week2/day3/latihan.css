@@ -17,8 +17,6 @@ div.main {
 }
 div.sidebar {
     float: left;
-    background-color: black;
-    color: white;
     height: 100%;
     width: 25%;
 }
@@ -26,8 +24,27 @@ div.content {
     float: left;
     width: 75%;
     height: 100%;
-    background-color: orangered;
 }
 div.footer {
     padding: 10px;
+}
+div.sideone {
+    height: 50%;
+    background-color: darkslategrey;
+    color: white;
+}
+div.sidetwo {
+    height: 50%;
+    background-color: black;
+    color: white;
+}
+div.contone {
+    height: 50%;
+    background-color:maroon;
+    color: white;
+}
+div.conttwo {
+    height: 50%;
+    background-color: darkred;
+    color: white;
 }

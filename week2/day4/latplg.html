@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pembelian Barang</title>
+    </head>
+    <body>
+        <form name="beliBarang">
+            <fieldset style="width: 40%; margin: 50px 30% auto;">
+                <legend>
+                    <h2>FORM PEMBELIAN BARANG</h2>
+                </legend>
+                <pre>
+                    Nama Barang    : <select id="nama">
+                        <option value="monitor">Monitor</option>
+                        <option value="keyboard">Keyboard</option>
+                        <option value="cpu">CPU</option>
+                        <option value="mouse">Mouse</option>
+                    </select>
+                    <label for="Jumlah"         >Jumlah         : <input type="number" id="jumlah"></label>
+                    <label for="Status"         >Status         : <input type="checkbox" id="status"> Pelanggan</label>
+                    <label for="Harga"          >Harga          : <input type="number" id="harga" disabled></label>
+                    <label for="Total"          >Total          : <input type="number" id="total" disabled></label>
+                    <label for="Diskon"         >Diskon         : <input type="text" id="diskon" disabled></label>
+                    <label for="Bayar"          >Bayar          : <input type="number" id="bayar" disabled></label>
+                    <input type="button" value="Proses" onclick="beli()"> <input type="reset" value="Reset">
+                </pre>
+            </fieldset>
+        </form>
+
+        <script>
+            function beli() {
+                var nama=document.getElementById("nama").value;
+                var status=document.getElementById("status").checked;
+                function namaBarang() {
+                    if(nama=="monitor") {
+                        harga=1500000;
+                    } else if(nama=="keyboard") {
+                        harga=100000;
+                    } else if(nama=="cpu") {
+                        harga=3000000;
+                    } else {
+                        harga=50000;
+                    }
+                    return harga;
+                }
+                namaBarang();
+                document.getElementById("harga").value=harga;
+                function cekStatus() {
+                    if(status==true) {
+                        diskon=10;
+                    } else {
+                        diskon=0;
+                    }
+                    return diskon;
+                }
+                cekStatus();
+                document.getElementById("diskon").value=diskon+" %";
+                var jumlah=parseInt(document.getElementById("jumlah").value);
+                function totalHarga() {
+                    return total=harga*jumlah;
+                }
+                function totalBayar() {
+                    return bayar=total*(100-diskon)/100;
+                }
+                totalHarga();
+                totalBayar();
+                document.getElementById("total").value=total;
+                document.getElementById("bayar").value=bayar;
+            }
+        </script>
+    </body>
+</html>

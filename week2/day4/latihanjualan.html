@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Latihan Jualan</title>
+        <style>
+            input[type="number"] {
+                width: 85px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function jualan() {
+                var nama=document.getElementById("nama").value;
+                var harga=parseInt(document.getElementById("harga").value);
+                var jumlah=parseInt(document.getElementById("jumlah").value);
+                var diskon=parseInt(document.getElementById("diskon").value);
+                var total=harga*jumlah;
+                document.getElementById("total").value=total;
+                document.getElementById("bayar").value=total*(100-diskon)/100;
+                console.log("Nama Barang    : "+nama);
+                console.log("Harga          : "+harga);
+                console.log("Jumlah         : "+jumlah);
+                console.log("Total          : "+total);
+                console.log("Diskon         : "+diskon);
+                console.log("Bayar          : "+(total*(100-diskon)/100));
+            }
+        </script>
+        <h2>PROGRAM PENJUALAN BARANG</h2><hr>
+        <form name="formJualan">
+            <pre>
+                <label for="namaBarang">Nama Barang : <input type="text" id="nama"></label>
+                <label for="harga">Harga       : <input type="number" id="harga"></label>
+                <label for="jumlah">Jumlah      : <input type="number" id="jumlah"></label>
+                <hr>
+                <label for="total">Total       : <input type="number" id="total" disabled></label>
+                <label for="diskon">Diskon      : <input type="number" id="diskon">(%)</label>
+                <label for="nayar">Bayar       : <input type="number" id="bayar" disabled></label>
+                <label></label>
+                <input type="button" value="Proses" onclick="jualan()"> <input type="reset" value="Reset">
+            </pre>
+        </form>
+    </body>
+</html>

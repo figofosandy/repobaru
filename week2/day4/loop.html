@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Loop</title>
+    </head>
+    <body>
+        <h2>Js Looping</h2>
+        <p id="demo"></p>
+        <p id="demoWhile"></p>
+        <script>
+            var cars=["BMW","Volvo","Saab","Ford","Fiat","Audi"];
+            var text="";
+            var textWhile="";
+            var i;
+            var j=0;
+            for(i=0;i<cars.length;i++) {
+                text+="<li>"+cars[i]+"</li>";
+            }
+            while(j<10) {
+                textWhile+="<br>&emsp;The number is "+j;
+                j++;
+            }
+            document.getElementById("demo").innerHTML="<ul>"+text+"</ul>";
+            document.getElementById("demoWhile").innerHTML=textWhile;
+        </script>
+    </body>
+</html>

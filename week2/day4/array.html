@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic Array</title>
+    </head>
+    <body>
+        <h2>Js Arrays</h2>
+        <p>Elemen array Js diakses melalui index numeric(dari 0).</p>
+        <p id="demo"></p>
+        <p id="demoArrayAsosiate"></p>
+        <br>
+        <p>Click the button to add a new element to the array <input type="text" id="newIndex"></p>
+        <input onclick="pushArray()" type="button" value="Try it">
+        <p id="array"></p>
+    <script>
+        var cars=["Saab","Volvo","BMW"];
+        document.getElementById("demo").innerHTML = cars[0];
+        var users={email:"anonymous@anonim.com",name:"anonymous"};
+        document.getElementById("demoArrayAsosiate").innerHTML=users.email;
+        document.getElementById("array").innerHTML=cars;
+        function pushArray() {
+            cars.push(document.getElementById("newIndex").value);
+            document.getElementById("array").innerHTML=cars;
+        }
+    </script>
+    </body>
+</html>

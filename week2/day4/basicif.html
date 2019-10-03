@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Basic If Else</title>
+    </head>
+    <body>
+        <script lang="javascript">
+            function jumlah() {
+                var angka1=parseInt(document.getElementById("angka1").value);
+                var angka2=parseInt(document.getElementById("angka2").value);
+                var option=document.getElementById("option").value;
+                if(option=="tambah") {
+                    hitung();
+                    output();
+                } else if(option=="kali") {
+                    kali();
+                    output();
+                } else if(option=="kurang") {
+                    kurang();
+                    output();
+                }
+                else {
+                    bagi();
+                    output();
+                }
+                function hitung() {
+                    return hasil=angka1+angka2;
+                }
+                function kali() {
+                    return hasil=angka1*angka2;
+                }
+                function bagi() {
+                    return hasil=angka1/angka2;
+                }
+                function kurang() {
+                    return hasil=angka1-angka2;
+                }
+                function output() {
+                    function log() {
+                        console.log("Hasil = "+hasil);
+                    }
+                    if(Number.isNaN(hasil)) {
+                        alert('Silahkan isi form inputan');
+                        document.getElementById("hasil").value=0;
+                        log();
+                    } else {
+                        document.getElementById("hasil").value=hasil;
+                        log();
+                    }
+                }
+            }
+        </script>
+        <h2>JavaScript If/Else<br>Pertambahan/Perkalian/Pembagian</h2>
+        <pre>
+            <label>angka1 : </label>
+            <input type="number" id="angka1">
+            <label>angka2 : </label>
+            <input type="number" id="angka2">
+            <label></label>
+            <select id="option">
+                <option value="tambah">Tambah</option>
+                <option value="kali">Kali</option>
+                <option value="bagi">Bagi</option>
+                <option value="kurang">Kurang</option>
+            </select> <input type="button" onclick="jumlah()" value="Hitung">
+            <label></label>
+            <label>hasil : </label>
+            <input type="number" disabled id="hasil">
+        </pre>
+    </body>
+</html>

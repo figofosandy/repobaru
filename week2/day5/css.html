@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week 2 Ass. : CSS</title>
+        <style>
+            #container {
+                width: 900px;
+                margin: 50px auto auto;
+                background-color: #85c1e9;
+                padding: 10px;
+                border-style: outset;
+            }
+            #header {
+                position: relative;
+                height: auto;
+                margin: auto auto 10px;
+            }
+            #menu {
+                position: absolute;
+                right: 0px;
+                top: 0px;
+            }
+            #content {
+                height: 200px;
+                background-color:#a3e4d7;
+            }
+            #gambar {
+                background-color: #ec7063;
+                height: 200px;
+                margin: 10px auto 10px;
+            }
+            .artikel {
+                float: left;
+                width: 178px;
+                height: 100%;
+                text-align:center;
+                border: 1px solid white;
+            }
+            #info {
+                margin: 10px auto auto;
+                padding: 10px;
+                text-align: center;
+                height: auto;
+                background-color: #e67e22;
+            }
+            #footer {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header">
+                <div id="logo">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQMAAADCCAMAAAB6zFdcAAAA8FBMVEUBEx8AEx/3cmH0+Pc24+kBEh0ABxhNV18AAADcZ1gOFiAADx3RYlb4c2H2c2EAER0AAxI1P0f7/v436/Eln6UAAAYAAAwAABPz9vcAABU24ekAFB0AESAACxk14+bX290ORExcZGfm6uvgbV+ssLh2amveZFIYcXUrwcY/S04XFiAOFSIy198ILTZudnrS19kdgYgUWmA48/iSm50bIywjLDOFjJAafoUgj5Yos7myubsVZ2wqtLy+W1EEGiIvzNEeHCSnUUlEKCqKRkJVMDANOUBcMi53PDqBQzuBhoobnKRgsrTAxsZIUlxxeXwHJy+xdWgFAAAJvUlEQVR4nO2dj0PTSBbHZ2wmjDeUKU2T/sik/FjuQK+iKFURhVVk9/Q49///b+69pGKaCUsLnaSF9911pbE2zevn/ZxJl33739pjF1vr+o9dYAOhxeMWW/MF4+xxC20g6n4TNQtswFn2D+Ps73+c4Sl3/LHeV0YOHruIA+IARRwQByiyAfkC+UIm4oA4QBEHxAGKOCAOUMQBcYAiG5AvkC9kIg6IAxRxQBygiAPiAEUcEAcosgH5AvlCJuKAOEARB8QBijggDlDEAXGAIhuQL5AvZCIOiAMUcUAcoGrjgJW8cnbw0XCgZzxWhWr0BW4fqscKtfgCCn6ffmWemeDR+IJSrW63VZSoyRnq4UAdb5ZI4MfxaDjwN3fbtt6G9QSEejjg4dt2r1HU7ji70fBxcMC03LKN0N6TtbyZmvKCCA8bNgi9ta5Y8PmWmANhulcWCL32VVhHQKirPtD+uG1x0GgfhvBnhrEFnGTJOUjLIfmhxAhbsQISKn5LNfmC4joZb1nxoNF+I8FCFTtETX0jU8zIbyUg9M4SzRZ0kqX2BXgHQhgtX5ZEhA/SqMfBQRoXo51eSX7caWmRPeGBc5BeIIZFu1B6KTWv9q1UyUHxk2X9TZuDRvsHtg2L4m7pOND5iI8/yjcl1eLuOKnuLaHq5IALdWzlxwbmx+y5D4wDgf9qbZiJ+bUE5MfDkv6xAf2jUNUFhYo44JwpYUIpQ/h1LXxwBamgaIarltA6na49JA6gB4A26VWn0/ne6eT/+/2/JRGhsRMyoSp5X6iKbBAzLVpHga3XR3vtohV6ja1IVRiqq4qJOlbyIPC8oZfTwAs+ys1dC4Re+5vkk+nig/EFblgc7Qdw0XkNvcHg0pc3jNWq65yq4YBBnP/rHC7ZK2DwPhI62rKGKb32ntSaL+DUy8OBFrF8H3iWRn3ImKGdH+HxWkuxiormSjiAxOhv2xbwvHcSzi6SKysgYH6E7KgfEAdQFZ94hWgA8eBAGwVu0t8sDhLABu0dWVVAqIADLBGjo2JOAAXb3ZhhySz3ysZqxwm7/zhlOThA2lX/wBtMmyDNixxPrnWyuduwSiVoG6BgroJS9xwYCPDhq6DoCN5gdJkwozk0k0r+gLBoBcZxYn7VCCvNAVCgotGgWBpAXpSCZQUxGKGsf9yTXFcRE5zbgAstwu+BNx0S4edzaWLsJ9OrbO2Utg1RJYWSc1+Abgnz4sCqEfdDA4xgUIQLFZG92tDDsZp5CL6gVSwPSkqDE5l/kvDHdjzotQ+l0WlucCqnHODVMR4dvbZNAHnR5J4tjHxjg9DbGicQTsRqcwBnSKBRGBazQtCRQkydOblhrAZh03VMcB8PsFGwbDB6kQgjrkthZoSA/GhPlHqbLYVjtdXmIOHDoV0hQqNgppZWFVNJ6bJTSzhfg3UbD6ArjDqFscEQCsYDrB7zDRHgbvprJekR8+NKxwOjRXfbbpUGwWmL8al5YbozsWw1HvPjSscDqAPtvDgYBlleLI5IcLeaXSm134ZcrzAHzISndqPgedtd3I5Z/HihnrTzY6Oxe+x62cmlDbQWf42K4XDSKBSU1hJxSdvQq2C3mitfEIplebFoAyiaz5SZXPW0L2gW/rAG7ZAvn/V/Gmq1fMEIo2P/stgm4NhgX94wFYAuOrqyBgm99lWkmMv/S4QzDtAKYafoB1AqHKQYlL4yM93NIgg9MALkx5WMiULr6KjgCfBoAI0Crr2WCqKkLF12OnY6Y3bFAa4vJsW8OABPgLwYW1UPn3AB/SOO1QomaLQPW/heV46DWMt3Vo0MjcK2z/7mfhXNcLdaMSwiBw5zgysOmEjORlaJ6AWvwvS0N71yupu7GBbbO6HAZehV40AJyIt2eTSKbit8eXhYsAHkBdzE4w4EZ3mhdWQZALA4DUsnxXmACrvVIC88607Ms2IcxPKjHQy8Az++7XSadaeXnaBOZG7bJkc2ENHRa6s68oIXLXNbiuPgRW/yIEC/wN0uvrrwBeiZ1dlBcZAMDzuhKF81yT9QzB/n8mP7bSTMnA6wBL6A+81wpd0eoPn81j02XAstD395w0spXN/zt3gOsFdIzgojRNxyErySuBnj9lfWSvwaq+1Emt/jTq+6ODBMdjAv5oMiLiwJLXB31i3C9YTuZKzWa3+IbqysFyYXHLCSvAhYnHaZwbRwOwdQKE3Gar2xHzPDZjz18nAgTNnCUvBxjj0VcT9dje9l23ZdrwovnAOIaa39kq1Hw+1uei0zvHLqTWl+3BpPtuyuGAeQF88tCwyCTsjnmIOIxN9Nb3PTFaw8L56DdGHJ6hRGKlE3j4enjwsG2VAe4lz959v8GWlWgAN8reRFWb/4Tup49vjOmVHJVWOnBVSx7IbHiVxQsXAbiNbJdFYc4haUg+f/mFetZ3ty+si/4ddzIxYeIhfqC5kdilUyWCT457+ezq/fSo79kcQ6t2i/hL7AsL45Gg4K1VFwItebzSfNOfQE1Zz6S3jkqZilzJpTi46JOAg6CaZLxMFou/u1ufFkdjV//rYxfbT5p599Z8pyc6BY63Iag0HwXprkE1zX7GbYaFpHNuDgJ1/f3nXNLQe1sohy27MxNIwiodSXeTi4yTJflJ7zDp+6amXRHw1zcTHYh/JI9C+ac3BQrs/+okNBKgccaCFP8xicdHHRSTx/unFPGzxN/WAVOOAG6puDXDTY7sbCGJ78afn4fGr+x5+51p5LTmZpcesS5wcIwWDYkXhXI4tFf/1eRmiuK7wZfCU4wKU0HKJk+XE4uvThreM8LPmK4f7Odmh+TdK54uLlZq4soGkYZP3iO/nr4Oe00JnfCunf+tw3tw7m7yYnvsC5CN+9Tqvkcz6p7zUT6ve7MrCR5sXYWIv2y+oL6RULee4NwRtOI329TKa7F3NVi1MoXPhT/eMi5WatDa43gvw4DE5Cra9vyNHs9/W7kvBbIgRPrbkyHIDCk2Aw3O7mPzyV/JEWSlD2zqrMEbBRUMbVYNHZ2jvvvvC87xETuW98Eqz/6U55oflJlS9MLDUHwnDZ8c4KWwu5+roxTwd9rS+JcncfvDMOYpNcHoVQFohclBCxf7F+B13AJxWvHAcAgkhaRsf577OItYIO8k4SrpICc7gHQ8dQHcYsfxQuQwuNYno+xakhV46Dm3QP67oSfdc4fec8q8MXllDEAXGAIg6IAxRxQBygyAbkC+QLmYgD4gBFHBAHKOKAOEARB8QBimxAvkC+kIk4IA5QxAFxgCIOiAMUcUAcoMgG5AvkC5mIA+IARRwQByjigDhAEQfEAYpsQL5AvpCJOCAOUMQBcYAiDogDFHFAHID+DwXIBsm2JnseAAAAAElFTkSuQmCC" alt="Logo" title="Logo" width="100px" height="100px">
+                    <big style="font-weight:bold;">Logo</big>
+                </div>
+                <div id="menu">
+                    <a href="css.html">about</a>
+                    <a href="css.html">contact</a>
+                    <a href="css.html">login</a>
+                </div>
+            </div>
+            <div id="gambar">
+                <img src="http://digitalfotografi.net/wp-content/uploads/2015/11/break-the-rule-komposisi-fotografi-landscape.jpg" alt="gambar" title="gambar" width="100%" height="100%">
+            </div>
+            <div id="content">
+                <div class="artikel">
+                    <h3>Artikel 1</h3>
+                </div>
+                <div class="artikel">
+                    <h3>Artikel 2</h3>
+                </div>
+                <div class="artikel">
+                    <h3>Artikel 3</h3>
+                </div>
+                <div class="artikel">
+                    <h3>Artikel 4</h3>
+                </div>
+                <div class="artikel">
+                    <h3>Artikel 5</h3>
+                </div>
+            </div>
+            <div id="info">
+                <h3>Info</h3>
+            </div>
+            <div id="footer">
+                <p>Home about contact service</p>
+            </div>
+        </div>
+    </body>
+</html>

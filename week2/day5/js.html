@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Week2 Ass. : Js</title>
+    </head>
+    <body>
+        <form>
+            <fieldset style="width:50%; margin:50px 25% auto;">
+                <legend><h2>PROGRAM PENJUALAN MOTOR</h2></legend>
+                <label>
+                    <pre>Merk Motor         : <select id="namaBarang">
+                        <option value="honda">Honda</option>
+                        <option value="yamaha">Yamaha</option>
+                        <option value="suzuki">Suzuki</option>
+                    </select></pre>
+                </label>
+                    <pre>Aksesori           : <label><input type="checkbox" id="velgAks"> Velg Racing</label></pre>
+                    <pre>                     <label><input type="checkbox" id="helmAks"> Helm</label></pre>
+                    <pre>                     <label><input type="checkbox" id="jaketAks"> Jacket</label></pre>
+                    <pre>Cara Pembayaran    : <label><input name="option" type="radio" id="tunaiByr"> Tunai</label></pre>
+                    <pre>                     <label><input name="option" type="radio" id="kreditByr"> Kredit</label></pre>
+                <label>
+                    <pre>Harga              : <input type="number" id="hargaBarang" disabled></pre>
+                </label>
+                <label>
+                    <pre>Bunga              : <input type="number" id="bungaTotal" disabled></pre>
+                </label>
+                <label>
+                    <pre>Diskon             : <input type="number" id="diskonTotal" disabled></pre>
+                </label>
+                <label>
+                    <pre>Total              : <input type="number" id="grandTotal" disabled></pre>
+                </label>
+                    <pre><input type="button" value="Proses" onclick="proses()"> <input type="reset" value="Reset"></pre>
+            </fieldset>
+        </form>
+        <script>
+            function proses() {
+                var nama=document.getElementById("namaBarang").value;
+                var velg=document.getElementById("velgAks").checked;
+                var helm=document.getElementById("helmAks").checked;
+                var jaket=document.getElementById("jaketAks").checked;
+                var tunai=document.getElementById("tunaiByr").checked;
+                var kredit=document.getElementById("kreditByr").checked;
+                var harga=0;
+                var total;
+                var diskon;
+                var bunga;
+                function pilihBarang() {
+                    if(nama=="honda") {
+                        harga+=15000000;
+                    } else if(nama=="yamaha") {
+                        harga+=14000000;
+                    } else {
+                        harga+=13000000;
+                    }
+                    return harga;
+                }
+                pilihBarang();
+                function aksesoris() {
+                    function velgTmb() {
+                        if(velg==true) {
+                            harga+=450000;
+                        } else {
+                            harga+=0;
+                        }
+                        return harga;
+                    }
+                    velgTmb();
+                    function helmTmb() {
+                        if(helm==true) {
+                            harga+=250000;
+                        } else {
+                            harga+=0;
+                        }
+                        return harga;
+                    }
+                    helmTmb();
+                    function jaketTmb() {
+                        if(jaket==true) {
+                            harga+=300000;
+                        } else {
+                            harga+=0;
+                        }
+                        return harga;
+                    }
+                    jaketTmb();
+                    return harga;
+                }
+                aksesoris();
+                function diskonTmb() {
+                    if(tunai==true) {
+                        diskon=harga/10;
+                    } else {
+                        diskon=0;
+                    }
+                    return diskon;
+                }
+                diskonTmb();
+                function bungaTmb() {
+                    if(kredit==true) {
+                        bunga=harga*15/100;
+                    } else {
+                        bunga=0;
+                    }
+                    return bunga;
+                }
+                bungaTmb();
+                total=harga+bunga-diskon;
+                document.getElementById("hargaBarang").value=harga;
+                document.getElementById("bungaTotal").value=bunga;
+                document.getElementById("diskonTotal").value=diskon;
+                document.getElementById("grandTotal").value=total;
+            }
+        </script>
+    </body>
+</html>

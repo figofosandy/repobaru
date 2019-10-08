@@ -86,11 +86,15 @@ delete from user where user_id=3;
 
 SELECT * FROM user WHEre alamat='jakarta';
 
-SELECT salary as salary/age,count(salary) as banyak from user where salary>4500 group by salary
+SELECT salary as salaryAge,count(salary) as banyak from user where salary>4500 group by salary
 union all 
 select 'jumlah' salary,count(salary) from user where salary>4500
 union all
+select '',''
+union all
 SELECT salary,count(salary) as banyak from user where salary=2000
+union all
+select '',''
 union all
 SELECT age,count(age) as banyak FROM user where age in(23,25) group by age
 UNION ALL

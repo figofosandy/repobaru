@@ -1,0 +1,73 @@
+//Lihat database
+// show dbs
+
+     
+//Lihat Collection
+// show collections
+
+//Buat database
+// use namaDatabase
+
+// Buat Collection
+   // db.createCollection("namaKoleksi")
+
+//Mengisi data
+    //db.namaKoleksi.insert ( {data})
+        // jika namaKoleksi tidak ada, maka namaKoleksi akan dibuat otomatis
+
+    // input multiple data
+    /* db.namaKoleksi.insert (
+        [
+            {
+                user_id:2,
+                nama:"ucup"
+            },
+            {
+                user_id:3,
+                nama:"asto
+            }
+        ]
+    ) */
+
+// Mengupdate data
+    // db.namaKoleksi.update(kriteriaSeleksi, dataUpdate)
+    // Contoh :
+        /* db.pengguna.update({'user_id':1}, {$set:{'age':21}})
+        atau
+        db.pengguna.update({"_id" : ObjectId("5d9d88736d0a13464725f595")},{$set:{'age':22}})
+ */
+
+// Menghapusdata
+    //db.namaKoleksi.remove(kriteria)
+    db.pengguna.remove({'user_id':7})
+ 
+    //semua
+    //db.namKoleksi.remove({})
+    db.user.remove({})
+
+// Query
+    // Operation < (less than)
+    db.pengguna.find({"age": {$lt:25}})
+    // Operation <= (less than equal)
+    db.pengguna.find({"age": {$lte:25}})
+    // Operation > (greater than)
+    db.pengguna.find({"age": {$gt:25}})
+    // Operation >= (greater than equal)
+    db.pengguna.find({"age": {$gte:25}})
+    // Operation != (not equal)
+    db.pengguna.find({"age": {$ne:25}})
+    // Operation or
+    db.pengguna.find({$or:[{"age": 21},{"jk": "L"}]})
+    // Operation and
+    db.pengguna.find({$and:[{"age": 21},{"jk": "L"}]})
+
+    //1. Tampilkan alamat di Jakarta
+    db.pengguna.find({"alamat": "Jakarta"}).pretty()
+    //2. Tampilkan data salary > 4500
+    db.pengguna.find({"salary": {$gt:4500}}).pretty()
+    //3. Tampilkan orang bergaji 2000
+    db.pengguna.find({"salary": 2000}).pretty()
+    //4. Tampilkan orang berumur 25
+    db.pengguna.find({"age": 25}).pretty()
+
+    db.pengguna.find({},{"age": 1,_id:0}).pretty()

@@ -1,0 +1,90 @@
+// count
+// db.namaKoleksi.count()
+    db.pengguna.count()
+
+// limit
+// db.namaKoleksi.find().limit(banyakLimit)
+    db.pengguna.find().limit(1)
+
+// sorting
+// 1 utk asc, -1 utk desc
+// ascending
+// db.namaKoleksi.find().sort({Kriteria:1})
+    db.pengguna.find().sort({"user_id":1}).pretty()
+// descending
+// db.namaKoleksi.find().sort({Kriteria:-1})
+    db.pengguna.find().sort({"user_id":-1}).pretty()
+
+// projection
+// db.namaKoleksi.find({},{Kriteria:1,Kriteria:0}).pretty()
+// 1 untuk ditampilkan, 0 untuk tdk ditampilkan
+    db.pengguna.find({},{"nama":1,"salary":1,_id:0}).pretty()
+
+// Data Modelling
+// db.namaKoleksi.insert({
+// field1: "field1Value",
+// field2: ["field2ArrayValue","field2ArrayValue","field2ArrayValue"],
+// field3: [{
+//              field3Field1:'value',
+//              field3Field2:'value',
+//         }]
+// })
+
+    db.exampleDataModel.insertMany([
+        {
+            title: 'MongoDB',
+            description: 'Deskripsi',
+            by: 'Me',
+            url: '1.1.1.1',
+            tags: ['sql','nosql','database'],
+            likes: 1000
+        },
+        {
+            title: 'Java Ovwerview',
+            description: 'Deskripsi Java',
+            by: 'Me',
+            url: '2.2.2.2',
+            tags: ['oop','condition','looping'],
+            likes: 500
+        },
+        {
+            title: 'JavaScript Ovwerview',
+            description: 'Deskripsi Js',
+            by: 'Me',
+            url: '3.3.3.3',
+            tags: ['oop','condition','looping'],
+            likes: 501,
+            comments: [{
+                user: 'user1',
+                message: 'Gak ada',
+                dateCreated: Date("2013-12-01T12:55:12"),
+                likes:10
+            },
+            {
+                user: 'user2',
+                isi: 'Apa Hayo',
+                dateCreated: Date("2013-12-01T12:55:12"),
+                likes:10
+            }]
+        }
+    ])
+
+db.provinsi.insertMany([
+    {
+        namaProvinsi:'DKI Jakarta',
+        kota:['Jakarta Barat','Jakarta Timur']
+    },
+    {
+        namaProvinsi:'Banten',
+        kota:['Tangerang']
+    },
+    {
+        namaProvinsi:'Jawa Barat',
+        kota:['Bandung']
+    },
+    {
+        namaProvinsi:'Jawa Tengah',
+        kota:['Kudus']
+    }
+])
+db.provinsi.find().pretty()

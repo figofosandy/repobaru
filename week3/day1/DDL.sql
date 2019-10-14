@@ -99,3 +99,31 @@ union all
 SELECT age,count(age) as banyak FROM user where age in(23,25) group by age
 UNION ALL
 SELECT 'jumlah' age,count(age) from user where age in(23,25);
+
+create database coba;
+use coba;
+create table cobaTable (
+    fieldCoba int(3)
+);
+
+use coba;
+-- nambah field baru
+-- alter table namaTable add fieldBaru typeData(length);
+alter table data_diri add umur varchar(10);
+
+-- nambah field baru
+-- alter table namaTable add fieldBaru typeData(length);
+alter table cobaTable modify fieldCoba int(5);
+
+-- hapus field
+-- alter table namaTable drop column namaField;
+alter table data_diri drop column umur
+
+
+-- hapus database
+-- drop database namaDatabase;
+drop database belajarsql;
+
+-- hapus table
+-- drop table namaTable;
+drop table data_diri;

@@ -1,0 +1,27 @@
+// Insert Keyword
+    // insertOne
+        db.coba.insertOne ({field:'value'})
+        db.coba.find()
+    // insertMany
+        db.coba.insertMany ([{field2:'value2'},{field3:'value3'}])
+        db.coba.find()
+
+// Find Keyword
+    // findOne
+    db.user.find() // Table Awal
+    db.user.findOne({"salary": 2000})
+
+    // find
+    db.user.find() // Table Awal
+    db.user.find({"salary": 2000})
+
+
+// Agregasi
+    // <
+    db.user.find() // Table Awal
+    db.user.find({"salary": {$gt:4500}})
+
+    // find
+    db.user.find() // Table Awal
+    db.user.find({"salary": {$gte:4500}})
+

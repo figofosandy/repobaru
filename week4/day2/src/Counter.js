@@ -17,6 +17,9 @@ class Counter extends React.Component {
     }
     render() {
         let currentValue=this.state.value;
+        if(currentValue%6==0) {
+            currentValue="Kucing";
+        };
         return(
             <View>
                 <Text>Nilai state saat ini : {currentValue}</Text>

@@ -67,5 +67,10 @@ const AppStateless = () => (
             </View>
     
 )
-export default AppBioStateless;
+//export default AppBioStateless;
 //export default AppStateless;
+
+import Pajak from './Pajak';
+export default Pajak;
+//import Persegi from './Persegi';
+//export default Persegi;

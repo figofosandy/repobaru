@@ -9,7 +9,7 @@ class Pajak extends React.Component {
         let pajakPersen=0;
         let ttlPajak="Nihil";
         if(ttlGaji<0) {
-            alert("Ada-ada aje ");
+            alert("Ada-ada aje");
         } else if(ttlGaji>=50000000&&ttlGaji<=250000000) {
             pajakPersen=5;
             ttlPajak=ttlGaji*pajakPersen/100;

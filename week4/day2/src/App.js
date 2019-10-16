@@ -6,12 +6,31 @@ import {
     View,
     Image,
     Text,
-    StatusBar
+    StatusBar,
+    Button
 } from 'react-native';
 import Biodata from './Biodata';
 import Ruang from './Ruang';
+import Pajak from './Pajak';
+import Persegi from './Persegi';
 
 class App extends React.Component {
+    state={value:null};
+    render() {
+        return(
+            <View>
+                <Text>Menu Pilihan :</Text><Text/>
+                <Button title="Hitung Luas Persegi Panjang" onPress={()=>this.setState({value:<Persegi />})}/>
+                <Text/>
+                <Button title="Hitung Pajak" onPress={()=>this.setState({value:<Pajak />})}/>
+                <Text/>
+                {this.state.value}
+            </View>
+        );
+    }
+}
+
+class AppBasic extends React.Component {
     render() {
         return (
             <View>
@@ -67,10 +86,9 @@ const AppStateless = () => (
             </View>
     
 )
+
+export default App;
 //export default AppBioStateless;
 //export default AppStateless;
 
-import Pajak from './Pajak';
-export default Pajak;
-//import Persegi from './Persegi';
 //export default Persegi;

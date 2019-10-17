@@ -1,54 +1,26 @@
 import React,{Component} from 'react';
-import {StyleSheet,View,Image,Text} from 'react-native';
-import { Colors } from 'react-native/Libraries/NewAppScreen';
+import {View,Image,Text,ImageBackground} from 'react-native';
+import {styles} from './StyleProfile';
 
 export default class ProfileColor extends Component {
     render() {
         return(
             <View style={styles.container}>
-                <View style={styles.cardContainer}>
-                    <View style={styles.cardImageContainer}>
-                        <Image style={styles.cardImage} source={require('../asset/user2.jpg')}/>
+                <ImageBackground style={styles.bgImage} source={require('../asset/bg.png')}>
+                    <View style={styles.cardContainer}>
+                        <View style={styles.cardImageContainer}>
+                            <Image style={styles.cardImage} source={require('../asset/kazuma.png')}/>
+                        </View>
+                        <Text style={styles.cardName}>Kazuma</Text>
+                        <View style={styles.cardDetailContainer}>
+                            <Text style={styles.cardDetail}>Main Protagonist of the Konosuba Series</Text>
+                        </View>
+                        <View>
+                            <Text style={styles.cardDescription}>Kazuma is a young man of average height and weight. He has short and slightly spiky chestnut-brown hair and green eyes. His usual outfit consists of a gold-trimmed green mantle, white shirt, pants and leather boots. He initially wore a green tracksuit. He usually wears his shortened katana, Chunchunmaru, on his belt.</Text>
+                        </View>
                     </View>
-                    <Text style={{color:'white',fontSize:20}}>Anonymous</Text>
-                    <Text/>
-                    <Text style={{color:'white',marginLeft:10,marginBottom:10}}>Anonymous is a decentralized international hacktivist group that is widely known for its various DDoS cyber attacks against several governments, government institutions and government agencies, corporations, and the Church of Scientology.</Text>
-                </View>
+                </ImageBackground>
             </View>
         );
     }
 }
-
-const profileCardColor='blue';
-
-const styles=StyleSheet.create({
-    container:{
-        flex:1,
-        justifyContent:'center',
-        alignItems:'center'
-    },
-    cardContainer:{
-        alignItems:'center',
-        backgroundColor:profileCardColor,
-        width:300,
-        height:400,
-        borderColor:'black',
-        borderWidth:3,
-        borderStyle:'solid',
-        borderRadius:20
-    },
-    cardImageContainer:{
-        alignItems:'center',
-        backgroundColor:'white',
-        borderWidth:3,
-        borderColor:'black',
-        width:120,
-        height:120,
-        borderRadius:60,
-        marginTop:30,
-        paddingTop:15
-    },
-    cardImage: {
-        width:80,height:80
-    },
-});

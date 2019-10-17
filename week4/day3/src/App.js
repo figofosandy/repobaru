@@ -29,5 +29,6 @@ import FlexBox from './component/FlexBox';
 import FlexComponent from './component/FlexComponent';
 import AlignItems from './component/AlignItems';
 import ProfileColor from './component/ProfileColor';
-export default ProfileColor;
+import loginApps from './component/loginApps';
+export default loginApps;
 //export default App;

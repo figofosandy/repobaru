@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {StyleSheet,Text,View,Button} from 'react-native';
 
+
 class HomeActivity extends Component {
     static navigationOptions={
         title:'Home',
@@ -16,7 +17,9 @@ class HomeActivity extends Component {
         return(
             <View style={styles.container}>
                 <Text style={styles.headerText}>Home Activity</Text>
-                <Button title="Go to Profile Activity" onPress={()=>this.props.navigation.navigate('Profile')}/>
+                <Button title="Go to State" onPress={()=>this.props.navigation.navigate('State')}/>
+                <Button title="Go to Flex" onPress={()=>this.props.navigation.navigate('FlexComponent')}/>
+                <Button title="Go to AlignItems" onPress={()=>this.props.navigation.navigate('AlignItems')}/>
             </View>
         );
     }  

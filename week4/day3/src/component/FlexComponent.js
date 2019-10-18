@@ -1,13 +1,24 @@
 import React,{Component} from 'react';
-import {StyleSheet,View} from 'react-native';
+import {StyleSheet,View,Button} from 'react-native';
 
 export default class FlexComponent extends Component {
+    static navigationOptions={
+        title:'FlexComponent',
+        headerStyle: {
+            backgroundColor:'#73c6b6'
+        }
+    };
+    state={
+        value:0
+    };
     render() {
         return(
             <View style={styles.container}>
                 <View style={styles.firstrow}/>
                 <View style={styles.secondrow}/>
                 <View style={styles.thirdrow}/>
+                <Button title="Go to Home" onPress={()=>this.props.navigation.popToTop()}/>
+                <Button title="Go Back" onPress={()=>this.props.navigation.goBack()}/>
             </View>
         );
     }

@@ -1,51 +1,39 @@
 import React, {Component} from 'react';
-import {View,Text} from 'react-native';
-
+import {View,Text,Button,ScrollView} from 'react-native';
+import {styles} from './AIStyle';
 export default class AlignItems extends Component {
+    static navigationOptions={
+        title:'AlignItems',
+        headerStyle: {
+            backgroundColor:'#73c6b6'
+        }
+    };
     render() {
         return(
             <View style={styles.container}>
-                <Text style={styles.headerStyle}>alignItems:'flex-center'</Text>
+                <ScrollView>
+                <Text style={styles.headerStyle}>alignItems:'center'</Text>
                 <View style={[{flexDirection:'column',alignItems:'center'},styles.elementsContainer]}>
                     <View style={styles.red}/>
                     <View style={styles.yellow}/>
                     <View style={styles.green}/>
                 </View>
+                <Text style={styles.headerStyle}>alignItems:'flex-start'</Text>
+                <View style={[{flexDirection:'column',alignItems:'flex-start'},styles.elementsContainer]}>
+                    <View style={styles.red}/>
+                    <View style={styles.yellow}/>
+                    <View style={styles.green}/>
+                </View>
+                <Text style={styles.headerStyle}>alignItems:'flex-end'</Text>
+                <View style={[{flexDirection:'column',alignItems:'flex-end'},styles.elementsContainer]}>
+                    <View style={styles.red}/>
+                    <View style={styles.yellow}/>
+                    <View style={styles.green}/>
+                </View>
+                <Button title="Go to Home" onPress={()=>this.props.navigation.popToTop()}/>
+                <Button title="Go Back" onPress={()=>this.props.navigation.goBack()}/>
+                </ScrollView>
             </View>
         );
-    }
-}
-
-const styles={
-    green:{
-        backgroundColor:'#32b76c',
-        height:50,
-        width:60
-    },
-    yellow:{
-        backgroundColor:'#faa030',
-        height:50,
-        width:100
-    },
-    red:{
-        backgroundColor:'#ee2c38',
-        height:50,
-        width:80
-    },
-    container:{
-        marginTop:48,
-        flex:1
-    },
-    headerStyle:{
-        fontSize:24,
-        fontWeight:'300',
-        marginBottom:24
-    },
-    elementsContainer:{
-        flex:1,
-        backgroundColor:'#ecf5fd',
-        marginLeft:24,
-        marginRight:24,
-        marginBottom:24
     }
 }

@@ -1,7 +1,6 @@
 import React,{Component} from 'react';
 import {StyleSheet,Text,View,Button} from 'react-native';
 
-
 class ProfileActivity extends Component {
     static navigationOptions={
         title:'Profile',
@@ -13,7 +12,7 @@ class ProfileActivity extends Component {
         return(
             <View style={styles.container}>
                 <Text style={styles.headerText}>Profile Activity</Text>
-                <Button title="Go to Home" onPress={()=>this.props.navigation.push('Home')}/>
+                <Button title="Go to Home" onPress={()=>this.props.navigation.popToTop()}/>
                 <Text style={styles.headerText}>Create New Profile Screen</Text>
                 <Button title="Go to New Profile" onPress={()=>this.props.navigation.push('Profile')}/>
                 <Button title="Go Back" onPress={()=>this.props.navigation.goBack()}/>

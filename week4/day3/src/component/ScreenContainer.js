@@ -5,12 +5,14 @@ import ProfileActivity from './ProfileActivity';
 import State from './State';
 import FlexComponent from'./FlexComponent';
 import AlignItems from './AlignItems';
+import BMI from './BMI/BMI';
 const RootStack=createStackNavigator(
     {
         Home:{screen:HomeActivity},
         State:{screen:State},
         FlexComponent:{screen:FlexComponent},
-        AlignItems:{screen:AlignItems}
+        AlignItems:{screen:AlignItems},
+        BMI:{screen:BMI}
     },
     {
         initialRouteName:'Home'

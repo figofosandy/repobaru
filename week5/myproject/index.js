@@ -43,12 +43,22 @@ server.route([
             }
         },
         handler:(request,h)=>{
-            console.log(request.payload);
-                let panjangRequest=parseInt(request.payload.panjang);
-                let lebarRequest=parseInt(request.payload.lebar);
-                let hasil=panjangRequest*lebarRequest;
-                    const data={data:'hello detail users',...request.payload,hasil:hasil}
-                    return h.response(data).code(200)
+            let panjangRequest=parseInt(request.payload.panjang);
+            let lebarRequest=parseInt(request.payload.lebar);
+            let hasil=panjangRequest*lebarRequest;
+            console.log({...request.payload,hasil});
+                const content={
+                    info:'Luas Persegi Panjang',
+                    ...request.payload,
+                    hasil:hasil
+                }
+                const data={
+                    statusCode:200,
+                    error:"",
+                    message:'Hitung Luas Persegi Panjang',
+                    content:{...content}
+                }
+                return h.response(data).code(data.statusCode)
         }
     },
     {

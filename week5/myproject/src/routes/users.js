@@ -4,7 +4,7 @@ const Joi=require('@hapi/joi');
 
 exports.plugin={
     pkg:require('../../package.json'),
-    name:'rout-books',
+    name:'route-books',
     register:async(server,options,next)=>{
         const basePath='/api/v1/';
         server.route([

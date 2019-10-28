@@ -5,7 +5,13 @@ const server = Hapi.Server({
 });
 const routes=require('./src/routes');
 server.route(routes);
-
+server.route({
+    method:'GET',
+    path:'/',
+    handler:(request,h)=>{
+        return 'I am root route';
+    }
+},)
 const init=async()=>{
     await server.start();
     console.log(`Server running at ${server.info.uri}`);
